@@ -4,6 +4,10 @@ Sosyal Bilgiler 7. sınıf 1. dönem 1. yazılı için hazırlık sitesi. Türk�
 
 موقع للاستعداد لامتحان الدراسات الاجتماعية الفصلي الأول (الصف السابع)، الشرح التركي على اليسار والعربي على اليمين. كل المعلومات مأخوذة من ملف المعلم.
 
+**Site · الموقع:** https://yahyaabohashem332.github.io/sosyal7-1/
+
+**Ezber listesi · ما يجب حفظه:** https://yahyaabohashem332.github.io/sosyal7-1/ezber/
+
 ## İçerik · المحتوى
 
 1. İletişim ve iletişim yolları
