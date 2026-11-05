@@ -1,8 +1,8 @@
 # Birlikte Yaşamak Atölyesi · ورشة العيش معاً
 
-Sosyal Bilgiler 7. sınıf, 1. ünite için etkileşimli sınav hazırlık sitesi. Türkçe anlatım solda, Arapça karşılığı sağda.
+Sosyal Bilgiler 7. sınıf 1. dönem 1. yazılı için hazırlık sitesi. Türkçe anlatım solda, Arapça karşılığı sağda. Bütün bilgiler öğretmenin gönderdiği hap bilgi dosyasından alınmıştır.
 
-موقع تفاعلي للاستعداد لامتحان الدراسات الاجتماعية (الصف السابع، الوحدة الأولى)، الشرح التركي على اليسار والعربي على اليمين.
+موقع للاستعداد لامتحان الدراسات الاجتماعية الفصلي الأول (الصف السابع)، الشرح التركي على اليسار والعربي على اليمين. كل المعلومات مأخوذة من ملف المعلم.
 
 ## İçerik · المحتوى
 
@@ -12,7 +12,9 @@ Sosyal Bilgiler 7. sınıf, 1. ünite için etkileşimli sınav hazırlık sites
 4. Millî meselelerde birlik ve beraberlik
 5. Geçmişten günümüze millî dayanışma
 
-Her bölümde etkileşimli oyunlar ve açıklamalı çoktan seçmeli test var. Ayrıca 20 soruluk genel deneme, "Yanlışlarım" tekrarı ve son tekrar kartı bulunur.
+Her bölümde etkileşimli oyunlar, “Sınavda böyle yaz” cümleleri ve örnek cevaplı açık uçlu yazılı soruları var. Ayrıca senaryoya göre yazılı provası, “Eksiklerim” tekrarı ve son tekrar kartı bulunur.
+
+Küreselleşme konusu (SB.7.2.1) öğretmenin dosyasında olmadığı için sitede yoktur.
 
 ## Kullanım · الاستخدام
 
