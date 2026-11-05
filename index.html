@@ -320,30 +320,17 @@ footer{padding:30px 0 50px;color:var(--ink-3);font-size:.85rem;text-align:center
 .wrate .btn[data-v="1"][aria-pressed=true]{background:var(--good);border-color:var(--good)}
 .wrate .btn[data-v="0"][aria-pressed=true]{background:var(--bad);border-color:var(--bad)}
 .wshow[hidden]{display:none}
-.scen-pick{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:12px}
-.scen-pick .btn{flex-direction:column;gap:2px;padding:10px 6px}
-.scen-pick .btn small{font-weight:600;opacity:.8;display:flex;gap:4px;justify-content:center}
-.scen-pick .btn[aria-pressed=true]{background:var(--c,var(--good));border-color:transparent}
-.scen-pick .btn[aria-pressed=true],.scen-pick .btn[aria-pressed=true] *{color:#fff;opacity:1}
-[data-theme=dark] .scen-pick .btn[aria-pressed=true],[data-theme=dark] .scen-pick .btn[aria-pressed=true] *{color:#0f241e}
 .paper-bar{display:flex;justify-content:center;margin-top:14px}
 .ptime{gap:10px}
 .ptime[disabled]{opacity:1;cursor:default}
 .pclock{font-family:var(--f-disp-tr);font-size:1.2rem;font-variant-numeric:tabular-nums}
 .ptime.over .pclock{color:var(--bad)}
 .examfacts .clean{margin:0}
-table.scen{min-width:640px}
-table.scen .n{text-align:center;width:44px;font-weight:800}
-table.scen td .ar,table.scen th .ar{margin-top:2px}
-table.scen .missing td{background:var(--warn-bg)}
-table.scen .tot td{font-weight:800;background:var(--sheet-2)}
 /* two languages side by side on one line */
 .lcard .n .ar,.lcard .pt .ar,.q .qn .st .ar{margin-inline-start:.7em}
-.srcnote{font-size:.8rem;color:var(--ink-3);margin-top:8px}
 .cmdwords{display:grid;gap:0;background:var(--sheet);border:1px solid var(--rule);border-radius:16px;overflow:hidden;padding:4px 16px}
 .cmdwords .bi{padding:8px 0}
 .cmdwords .bi+.bi{border-top:1px solid var(--rule)}
-@media (max-width:640px){.scen-pick{grid-template-columns:repeat(3,minmax(0,1fr))}}
 </style><svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 5h12v8H8l-3 3v-3H3zM15 9h6v8h-2v3l-3-3h-5v-4"/></symbol>
   <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M12.5 12H22M18 12v4M21 12v3"/></symbol>
@@ -419,26 +406,14 @@ table.scen .tot td{font-weight:800;background:var(--sheet-2)}
   </div>
   <div class="bi examfacts">
     <ul class="clean tr" style="--c:var(--good)">
-      <li><b>6–8 açık uçlu soru.</b> Çoktan seçmeli yok: cevabı kendin yazarsın.</li>
-      <li>Sorular genellikle <b>kısa bir durum metni ve alt maddelerden</b> oluşur.</li>
+      <li><b>Sorular açık uçludur.</b> Çoktan seçmeli yok: cevabı kendin yazarsın.</li>
       <li>Tek kelime yetmez. <b>Cümle kur, nedenini yaz.</b></li>
-      <li>Okul 5 senaryodan birini seçer. Hangisinin seçildiğini öğretmene sor.</li>
     </ul>
     <ul class="clean ar" lang="ar" dir="rtl" style="--c:var(--good)">
-      <li><b>من 6 إلى 8 أسئلة مفتوحة.</b> لا يوجد اختيار من متعدد: تكتب الجواب بنفسك.</li>
-      <li>تتكوّن الأسئلة عادةً من <b>نص قصير يصف موقفاً، وبنود فرعية</b>.</li>
+      <li><b>الأسئلة مفتوحة.</b> لا يوجد اختيار من متعدد: تكتب الجواب بنفسك.</li>
       <li>الكلمة الواحدة لا تكفي. <b>اكتب جملة، واذكر السبب.</b></li>
-      <li>تختار المدرسة سيناريو واحداً من 5. اسأل المعلم أيّها اختير.</li>
     </ul>
   </div>
-  <div class="tablewrap mt" id="examInfo"></div>
-  <div class="callout warn mt2">
-    <div class="bi">
-      <div class="tr"><span class="tag"><svg width="16" height="16"><use href="#i-warn"/></svg> Önemli</span><p>4. senaryo dışındaki senaryolarda <b>küreselleşme</b> konusundan da (SB.7.2.1) 1 veya 2 soru var. Bu konu öğretmenin hap bilgi dosyasında yok, bu yüzden bu sayfada da yok. Öğretmene küreselleşmenin sınavınızda olup olmadığını sor.</p></div>
-      <div class="ar" lang="ar" dir="rtl"><span class="tag"><svg width="16" height="16"><use href="#i-warn"/></svg> مهم</span><p>في كل السيناريوهات ما عدا الرابع يوجد أيضاً سؤال أو سؤالان عن <b>العولمة</b> (SB.7.2.1). هذا الموضوع غير موجود في ملف المعلم، لذلك ليس في هذه الصفحة. اسأل المعلم هل العولمة في امتحانكم.</p></div>
-    </div>
-  </div>
-  <p class="srcnote">Kaynak · المصدر: <a href="https://www.bilimsenligi.com/7-sinif-sosyal-bilgiler-ortak-yazili-konu-soru-dagilimi.html/" rel="noopener" target="_blank">Bilim Şenliği</a>, <a href="https://unikazan.com/oyss/7-sinif/sosyal-bilgiler/" rel="noopener" target="_blank">Unikazan</a> (2026-2027 konu-soru dağılımı; resmî tabloya dayanan yayınlar).</p>
 
   <div class="h-sec" style="--c:var(--c5)">
     <div class="ico"><svg width="24" height="24"><use href="#i-list"/></svg></div>
@@ -447,7 +422,7 @@ table.scen .tot td{font-weight:800;background:var(--sheet-2)}
   <div class="lessons" id="lessonCards"></div>
 
   <div class="extras">
-    <a class="xcard" href="#exam"><span class="i"><svg width="24" height="24"><use href="#i-flag"/></svg></span><span class="pair"><b class="tr">Yazılı Provası (senaryoya göre)</b><span class="ar">بروفة الامتحان المكتوب (حسب السيناريو)</span></span></a>
+    <a class="xcard" href="#exam"><span class="i"><svg width="24" height="24"><use href="#i-flag"/></svg></span><span class="pair"><b class="tr">Yazılı Provası</b><span class="ar">بروفة الامتحان المكتوب</span></span></a>
     <a class="xcard" href="#review"><span class="i"><svg width="24" height="24"><use href="#i-redo"/></svg></span><span class="pair"><b class="tr">Eksiklerim <span id="wrongCount"></span></b><span class="ar">نواقصي</span></span></a>
     <a class="xcard" href="#summary"><span class="i"><svg width="24" height="24"><use href="#i-key"/></svg></span><span class="pair"><b class="tr">Son Tekrar Kartı</b><span class="ar">بطاقة المراجعة الأخيرة</span></span></a>
   </div>
@@ -1121,8 +1096,8 @@ table.scen .tot td{font-weight:800;background:var(--sheet-2)}
   <div class="lesson-head">
     <canvas class="stars" data-stars="40"></canvas>
     <div class="bi">
-      <div class="tr"><div class="num">1. Dönem 1. Yazılı</div><h1>Yazılı provası</h1><p>Senaryonu seç. Gerçek sınav gibi kâğıda yaz, sonra örnek cevaplarla karşılaştır ve kendine puan ver. Sonunda hangi konuyu tekrar etmen gerektiğini görürsün.</p></div>
-      <div class="ar"><div class="num">الامتحان الفصلي الأول</div><h1>بروفة الامتحان المكتوب</h1><p>اختر السيناريو. اكتب على ورقة كأنه الامتحان الحقيقي، ثم قارن بالأجوبة النموذجية وأعطِ نفسك درجة. وفي النهاية سترى أيّ موضوع تحتاج إلى مراجعته.</p></div>
+      <div class="tr"><div class="num">1. Dönem 1. Yazılı</div><h1>Yazılı provası</h1><p>Gerçek sınav gibi kâğıda yaz, sonra örnek cevaplarla karşılaştır ve kendine puan ver. Sonunda hangi konuyu tekrar etmen gerektiğini görürsün.</p></div>
+      <div class="ar"><div class="num">الامتحان الفصلي الأول</div><h1>بروفة الامتحان المكتوب</h1><p>اكتب على ورقة كأنه الامتحان الحقيقي، ثم قارن بالأجوبة النموذجية وأعطِ نفسك درجة. وفي النهاية سترى أيّ موضوع تحتاج إلى مراجعته.</p></div>
     </div>
   </div>
   <div class="quiz" data-quiz="exam" style="margin-top:22px"></div>
@@ -1213,86 +1188,86 @@ table.scen .tot td{font-weight:800;background:var(--sheet-2)}
 <script>
 /* ===== WRITTEN-EXAM QUESTIONS =====
    Open-ended, like the 1. dönem 1. yazılı: a short situation, then sub-questions. Every answer comes from the teacher's hap bilgi notes.
-   s: hap bilgi · o: learning outcome · ctx: [tr, ar] · parts: [{q: [tr, ar], p: points, a: [tr, ar] model answer}] */
+   s: hap bilgi · ctx: [tr, ar] · parts: [{q: [tr, ar], p: points, a: [tr, ar] model answer}] */
 const WQ = [
-/* ---------- Hap Bilgi 1 · SB.7.1.1 ---------- */
-{id:"w1",s:1,o:"SB.7.1.1",ctx:["Elif, başka şehre taşınan arkadaşına bir mektup yazdı. Sınıfta öğretmeninin sorusunu konuşarak cevapladı. Teneffüste arkadaşını görünce gülümseyip el salladı.","كتبت إليف رسالة ورقية لصديقتها التي انتقلت إلى مدينة أخرى. وفي الصف أجابت عن سؤال المعلم بالكلام. وفي الاستراحة رأت صديقة لها فابتسمت ولوّحت بيدها."],parts:[
+/* ---------- Hap Bilgi 1 ---------- */
+{id:"w1",s:1,ctx:["Elif, başka şehre taşınan arkadaşına bir mektup yazdı. Sınıfta öğretmeninin sorusunu konuşarak cevapladı. Teneffüste arkadaşını görünce gülümseyip el salladı.","كتبت إليف رسالة ورقية لصديقتها التي انتقلت إلى مدينة أخرى. وفي الصف أجابت عن سؤال المعلم بالكلام. وفي الاستراحة رأت صديقة لها فابتسمت ولوّحت بيدها."],parts:[
  {q:["Metindeki üç durumun iletişim türünü belirleyiniz.","حدّد نوع التواصل في المواقف الثلاثة في النص."],p:6,a:["Mektup yazmak yazılı iletişimdir. Soruyu konuşarak cevaplamak sözlü iletişimdir. Gülümseyip el sallamak sözsüz iletişimdir.","كتابة الرسالة تواصل كتابي. الإجابة بالكلام تواصل شفهي. الابتسام والتلويح باليد تواصل غير لفظي."]},
  {q:["Sözsüz iletişimi açıklayınız.","اشرح التواصل غير اللفظي."],p:5,a:["Sözsüz iletişim, iletinin beden hareketleri, jestler, mimikler ve benzeri sözel olmayan unsurlarla aktarılmasıdır.","التواصل غير اللفظي هو نقل الرسالة بحركات الجسد والإيماءات وتعابير الوجه وما يشبهها من عناصر غير كلامية."]}]},
-{id:"w2",s:1,o:"SB.7.1.1",ctx:["Bir belediye, önemli bir duyuruyu bütün ilçeye hızlıca ulaştırmak istiyor. Bunun için gazete, radyo, televizyon ve genel ağı kullanıyor.","تريد بلدية إيصال إعلان مهم إلى كل المنطقة بسرعة. فتستخدم الجريدة والراديو والتلفاز والإنترنت."],parts:[
+{id:"w2",s:1,ctx:["Bir belediye, önemli bir duyuruyu bütün ilçeye hızlıca ulaştırmak istiyor. Bunun için gazete, radyo, televizyon ve genel ağı kullanıyor.","تريد بلدية إيصال إعلان مهم إلى كل المنطقة بسرعة. فتستخدم الجريدة والراديو والتلفاز والإنترنت."],parts:[
  {q:["Metinde geçen araçların ortak adını yazınız.","اكتب الاسم المشترك للوسائل المذكورة في النص."],p:4,a:["Bu araçların ortak adı kitle iletişim araçlarıdır.","اسمها المشترك وسائل الاتصال الجماهيري."]},
  {q:["Belediyenin bu araçları seçme nedenini açıklayınız.","اشرح لماذا اختارت البلدية هذه الوسائل."],p:6,a:["Çünkü kitle iletişim araçları geniş kitlelere kısa sürede ulaşmayı sağlar.","لأن وسائل الاتصال الجماهيري تُمكّن من الوصول إلى جمهور كبير في وقت قصير."]}]},
-{id:"w3",s:1,o:"SB.7.1.1",ctx:["Öğretmen sınıfa “Yarın gezi var.” dedi. Öğrenciler merak ettiklerini sordu, öğretmen de cevapladı.","قال المعلم للصف: «غداً توجد رحلة». فسأل الطلاب عمّا أرادوا معرفته، وأجابهم المعلم."],parts:[
+{id:"w3",s:1,ctx:["Öğretmen sınıfa “Yarın gezi var.” dedi. Öğrenciler merak ettiklerini sordu, öğretmen de cevapladı.","قال المعلم للصف: «غداً توجد رحلة». فسأل الطلاب عمّا أرادوا معرفته، وأجابهم المعلم."],parts:[
  {q:["Metindeki iletiyi yazınız.","اكتب الرسالة (ileti) الموجودة في النص."],p:4,a:["İleti, yarın gezi olduğu bilgisidir. Çünkü ileti, karşı tarafa aktarılmak istenen duygu, düşünce veya bilgidir.","الرسالة هي معلومة أن غداً توجد رحلة. لأن الرسالة هي الشعور أو الفكرة أو المعلومة التي نريد إيصالها إلى الطرف الآخر."]},
  {q:["Bu durumun neden iletişim olduğunu açıklayınız.","اشرح لماذا يُعدّ هذا الموقف تواصلاً."],p:5,a:["Çünkü bilgi karşılıklı paylaşılmıştır. İletişim; duygu, düşünce, bilgi ve deneyimleri sözlü, yazılı veya sözsüz yollarla karşılıklı paylaşma sürecidir.","لأن المعلومات تم تبادلها بين الطرفين. فالتواصل هو عملية تبادل المشاعر والأفكار والمعلومات والتجارب بطرق شفهية أو كتابية أو غير لفظية."]},
  {q:["İletişimin insanlara ve topluma katkısını yazınız.","اكتب فائدة التواصل للناس وللمجتمع."],p:4,a:["İletişim, insanların birbirini anlamasını ve toplumsal ilişkilerin güçlenmesini sağlar.","التواصل يساعد الناس على فهم بعضهم ويقوّي العلاقات الاجتماعية."]}]},
-/* ---------- Hap Bilgi 2 · SB.7.1.1 ---------- */
-{id:"w4",s:2,o:"SB.7.1.1",ctx:["Sınıf projesi için toplanan grupta Ayşe konuşurken Mert sürekli sözünü kesiyor. Selin ise telefonundan başını kaldırmıyor. Mert, Ayşe’nin fikriyle alay ediyor.","في مجموعة اجتمعت لمشروع الصف، يقاطع ميرت كلام عائشة باستمرار. أما سيلين فلا ترفع رأسها عن هاتفها. ويسخر ميرت من فكرة عائشة."],parts:[
+/* ---------- Hap Bilgi 2 ---------- */
+{id:"w4",s:2,ctx:["Sınıf projesi için toplanan grupta Ayşe konuşurken Mert sürekli sözünü kesiyor. Selin ise telefonundan başını kaldırmıyor. Mert, Ayşe’nin fikriyle alay ediyor.","في مجموعة اجتمعت لمشروع الصف، يقاطع ميرت كلام عائشة باستمرار. أما سيلين فلا ترفع رأسها عن هاتفها. ويسخر ميرت من فكرة عائشة."],parts:[
  {q:["Metindeki iletişimi engelleyen davranışları belirleyiniz.","حدّد السلوكيات التي تعيق التواصل في النص."],p:6,a:["Söz kesmek, sürekli telefonu kontrol etmek ve alaycı üslup kullanmak iletişimi engelleyen davranışlardır.","مقاطعة الكلام، والنظر إلى الهاتف باستمرار، واستخدام أسلوب ساخر سلوكيات تعيق التواصل."]},
  {q:["Bu grubun iletişimini güçlendirmek için bir öneri yazınız.","اكتب اقتراحاً لتقوية التواصل في هذه المجموعة."],p:6,a:["Grup üyeleri telefonu bırakmalı, konuşan kişiyi sözünü kesmeden dikkatle dinlemeli ve farklı fikirlere saygı göstermelidir.","على أعضاء المجموعة ترك الهاتف، والاستماع إلى المتكلم بانتباه دون مقاطعته، واحترام الآراء المختلفة."]}]},
-{id:"w5",s:2,o:"SB.7.1.1",ctx:["Can, kardeşine çok kızdı ve şöyle dedi: “Sen çok sorumsuzsun, eşyalarımı hep karıştırıyorsun!”","غضب جان من أخيه كثيراً وقال له: «أنت غير مسؤول أبداً، تعبث بأغراضي دائماً!»"],parts:[
+{id:"w5",s:2,ctx:["Can, kardeşine çok kızdı ve şöyle dedi: “Sen çok sorumsuzsun, eşyalarımı hep karıştırıyorsun!”","غضب جان من أخيه كثيراً وقال له: «أنت غير مسؤول أبداً، تعبث بأغراضي دائماً!»"],parts:[
  {q:["Can hangi dili kullanmıştır? Gerekçesiyle yazınız.","أيّ لغة استخدم جان؟ اكتب ذلك مع السبب."],p:5,a:["Can sen dilini kullanmıştır. Çünkü cümlesi suçlayıcı ve yargılayıcıdır, kişiyi hedef alır.","استخدم جان لغة الأنت. لأن جملته تتّهم وتحكم وتستهدف الشخص."]},
  {q:["Can’ın cümlesini ben dili ile yeniden yazınız.","أعد كتابة جملة جان بلغة الأنا."],p:6,a:["Eşyalarım karıştırılınca üzülüyorum. Eşyalarımı kullanmadan önce bana sorarsan sevinirim.","أحزن عندما يُعبث بأغراضي. سأفرح لو سألتني قبل أن تستخدمها."]},
  {q:["Sen dilinin iletişimde yol açabileceği bir sonucu yazınız.","اكتب نتيجة واحدة قد تسبّبها لغة الأنت في التواصل."],p:3,a:["Sen dili yanlış anlaşılma ve tartışmalara neden olabilir.","لغة الأنت قد تسبّب سوء الفهم والشجار."]}]},
-{id:"w6",s:2,o:"SB.7.1.1",ctx:["Zeynep’in kedisi kayboldu ve Zeynep çok üzgün. Ali: “Üzülme, yenisini alırsın.” dedi. Elif ise: “Çok üzgün olmalısın, onu çok seviyordun. İstersen birlikte arayalım.” dedi.","ضاعت قطة زينب وهي حزينة جداً. قال علي: «لا تحزني، ستشترين غيرها». أما إليف فقالت: «لا بدّ أنك حزينة جداً، كنتِ تحبينها كثيراً. إن شئتِ لنبحث عنها معاً»."],parts:[
+{id:"w6",s:2,ctx:["Zeynep’in kedisi kayboldu ve Zeynep çok üzgün. Ali: “Üzülme, yenisini alırsın.” dedi. Elif ise: “Çok üzgün olmalısın, onu çok seviyordun. İstersen birlikte arayalım.” dedi.","ضاعت قطة زينب وهي حزينة جداً. قال علي: «لا تحزني، ستشترين غيرها». أما إليف فقالت: «لا بدّ أنك حزينة جداً، كنتِ تحبينها كثيراً. إن شئتِ لنبحث عنها معاً»."],parts:[
  {q:["Kim empati kurmuştur? Gerekçesiyle yazınız.","من أظهر التعاطف؟ اكتب ذلك مع السبب."],p:6,a:["Elif empati kurmuştur. Çünkü kendini Zeynep’in yerine koymuş, onun duygularını anlamaya çalışmış ve bunu ona yansıtmıştır.","إليف أظهرت التعاطف. لأنها وضعت نفسها مكان زينب، وحاولت فهم مشاعرها، وأظهرت لها ذلك."]},
  {q:["Empatiyi açıklayınız.","اشرح التعاطف."],p:5,a:["Empati, kendini karşıdaki kişinin yerine koyarak onun duygu ve düşüncelerini anlamaya çalışma ve bunu ona yansıtmadır.","التعاطف هو أن تضع نفسك مكان الشخص الآخر فتحاول فهم مشاعره وأفكاره، ثم تُظهر له ذلك."]}]},
-{id:"w7",s:2,o:"SB.7.1.1",ctx:["Arkadaşı konuşurken Ece gülümsüyor, arada başını sallıyor ve onu dikkatle dinliyor. Hiçbir şey söylemeden de arkadaşına ilgisini gösteriyor.","بينما تتكلم صديقتها، تبتسم إجه، وتهزّ رأسها أحياناً، وتستمع إليها بانتباه. وتُظهر اهتمامها بصديقتها حتى دون أن تقول شيئاً."],parts:[
+{id:"w7",s:2,ctx:["Arkadaşı konuşurken Ece gülümsüyor, arada başını sallıyor ve onu dikkatle dinliyor. Hiçbir şey söylemeden de arkadaşına ilgisini gösteriyor.","بينما تتكلم صديقتها، تبتسم إجه، وتهزّ رأسها أحياناً، وتستمع إليها بانتباه. وتُظهر اهتمامها بصديقتها حتى دون أن تقول شيئاً."],parts:[
  {q:["Metindeki mimik ve jest örneklerini belirleyiniz.","حدّد مثال تعبير الوجه (mimik) ومثال الإيماءة (jest) في النص."],p:5,a:["Gülümsemek mimiktir, çünkü yüz ifadesidir. Başını sallamak jesttir, çünkü baş hareketidir.","الابتسام تعبير وجه (mimik) لأنه في الوجه. وهزّ الرأس إيماءة (jest) لأنه حركة بالرأس."]},
  {q:["Beden dilini açıklayınız.","اشرح لغة الجسد."],p:4,a:["Beden dili; jest, mimik, duruş ve fiziksel mesafe gibi sözel olmayan yollarla duygu ve düşüncelerin ifade edilmesidir.","لغة الجسد هي التعبير عن المشاعر والأفكار بطرق غير كلامية مثل الإيماءات وتعابير الوجه ووضعية الجسم والمسافة."]},
  {q:["Ece’nin arkadaşını dinleme biçiminin adını yazınız ve önemini belirtiniz.","اكتب اسم طريقة استماع إجه لصديقتها، واذكر أهميتها."],p:4,a:["Etkin dinlemedir. Karşımızdaki kişiyi dikkatle dinlemek ve onu anlamaya çalışmak etkili iletişim için önemlidir.","هذا هو الإصغاء الفعّال. والاستماع إلى الشخص الآخر بانتباه ومحاولة فهمه مهمان للتواصل الفعّال."]}]},
-{id:"w8",s:2,o:"SB.7.1.1",ctx:["Öğretmen sınıfa şöyle dedi: “İyi anlaşmak için çok konuşmak yetmez. Etkili iletişimin de anahtarları vardır.”","قال المعلم للصف: «الكلام الكثير لا يكفي لنتفاهم جيداً. فللتواصل الفعّال مفاتيح أيضاً»."],parts:[
+{id:"w8",s:2,ctx:["Öğretmen sınıfa şöyle dedi: “İyi anlaşmak için çok konuşmak yetmez. Etkili iletişimin de anahtarları vardır.”","قال المعلم للصف: «الكلام الكثير لا يكفي لنتفاهم جيداً. فللتواصل الفعّال مفاتيح أيضاً»."],parts:[
  {q:["Etkili iletişimde amaç nedir? Yazınız.","ما الهدف في التواصل الفعّال؟ اكتبه."],p:4,a:["Etkili iletişimde amaç, karşıdaki kişiyi gerçekten anlamaktır.","الهدف في التواصل الفعّال هو فهم الشخص الآخر حقاً."]},
  {q:["Etkili iletişimin anahtarlarından üçünü yazınız.","اكتب ثلاثة من مفاتيح التواصل الفعّال."],p:5,a:["Empati, ben dili ve etkin dinleme. (Farklılıklara saygı ve beden dili de yazılabilir.)","التعاطف، ولغة الأنا، والإصغاء الفعّال. (ويمكن أيضاً كتابة احترام الاختلافات ولغة الجسد.)"]},
  {q:["Etkili iletişimin topluma katkısını açıklayınız.","اشرح فائدة التواصل الفعّال للمجتمع."],p:5,a:["Etkili iletişim, insanların birbirini anlamasını sağlar ve toplumda birlikte yaşama kültürünü güçlendirir.","التواصل الفعّال يساعد الناس على فهم بعضهم، ويقوّي ثقافة العيش المشترك في المجتمع."]}]},
-{id:"w9",s:2,o:"SB.7.1.1",ctx:["Kerem ile Ali, sınıf gazetesinin konusunda anlaşamıyor. Kerem, Ali’nin sözünü kesip “Senin fikrin çok saçma!” diyor. Ali de sesini yükseltiyor ve tartışma büyüyor.","لا يتفق كرم وعلي على موضوع جريدة الصف. يقاطع كرم عليّاً ويقول: «فكرتك سخيفة جداً!». فيرفع علي صوته أيضاً ويكبر الشجار."],parts:[
+{id:"w9",s:2,ctx:["Kerem ile Ali, sınıf gazetesinin konusunda anlaşamıyor. Kerem, Ali’nin sözünü kesip “Senin fikrin çok saçma!” diyor. Ali de sesini yükseltiyor ve tartışma büyüyor.","لا يتفق كرم وعلي على موضوع جريدة الصف. يقاطع كرم عليّاً ويقول: «فكرتك سخيفة جداً!». فيرفع علي صوته أيضاً ويكبر الشجار."],parts:[
  {q:["Kerem’in iletişimi olumsuz etkileyen iki davranışını belirleyiniz.","حدّد سلوكين من سلوكيات كرم يؤثران سلباً على التواصل."],p:5,a:["Söz kesmek ve suçlayıcı, yargılayıcı konuşmak (sen dili).","مقاطعة الكلام، والكلام الذي يتّهم ويحكم (لغة الأنت)."]},
  {q:["Tartışmanın anlaşmaya dönüşmesi için Kerem’in yapabileceklerini yazınız.","اكتب ما يمكن أن يفعله كرم ليتحوّل الشجار إلى اتفاق."],p:6,a:["Ali’yi sözünü kesmeden dikkatle dinlemeli, kendini onun yerine koymalı ve farklı fikre saygı göstermelidir. Düşüncesini suçlamadan, ben diliyle söylemelidir.","عليه أن يستمع إلى علي بانتباه دون مقاطعته، وأن يضع نفسه مكانه، وأن يحترم الرأي المختلف. وأن يقول رأيه بلغة الأنا دون اتهام."]}]},
-/* ---------- Hap Bilgi 3 · SB.7.1.2 ---------- */
-{id:"w10",s:3,o:"SB.7.1.2",ctx:["Ayşe görme engelli, Emre ise tekerlekli sandalye kullanıyor. İkisi de aynı okula gidiyor ve arkadaşlarıyla birlikte öğrenmek istiyor.","عائشة كفيفة، وإمره يستخدم كرسياً متحركاً. يذهب كلاهما إلى المدرسة نفسها ويريدان التعلّم مع أصدقائهما."],parts:[
+/* ---------- Hap Bilgi 3 ---------- */
+{id:"w10",s:3,ctx:["Ayşe görme engelli, Emre ise tekerlekli sandalye kullanıyor. İkisi de aynı okula gidiyor ve arkadaşlarıyla birlikte öğrenmek istiyor.","عائشة كفيفة، وإمره يستخدم كرسياً متحركاً. يذهب كلاهما إلى المدرسة نفسها ويريدان التعلّم مع أصدقائهما."],parts:[
  {q:["Özel gereksinimli bireyleri açıklayınız.","اشرح من هم الأفراد ذوو الاحتياجات الخاصة."],p:5,a:["Özel gereksinimli bireyler; günlük yaşamlarını sürdürebilmek ve toplum içinde bağımsız yaşayabilmek için ek destek ve eğitime ihtiyaç duyan bireylerdir.","هم الأفراد الذين يحتاجون دعماً وتعليماً إضافيين ليتابعوا حياتهم اليومية ويعيشوا باستقلالية في المجتمع."]},
  {q:["Ayşe ve Emre’nin toplumdaki yeri ve hakları için ne söylenebilir? Yazınız.","ماذا يمكن أن يقال عن مكانة عائشة وإمره وحقوقهما في المجتمع؟ اكتبه."],p:5,a:["Toplumun eşit ve değerli bireyleridir, herkesle aynı haklara sahiptirler.","هما فردان متساويان وذوا قيمة في المجتمع، ولهما الحقوق نفسها التي للجميع."]}]},
-{id:"w11",s:3,o:"SB.7.1.2",ctx:["Yeni açılacak bir okulda tekerlekli sandalye kullanan ve görme engelli öğrenciler de okuyacak. Okul müdürü, öğrencilerden fikir istiyor.","في مدرسة ستُفتتح قريباً سيدرس أيضاً طلاب يستخدمون كراسي متحركة وطلاب مكفوفون. ويطلب المدير أفكاراً من الطلاب."],parts:[
+{id:"w11",s:3,ctx:["Yeni açılacak bir okulda tekerlekli sandalye kullanan ve görme engelli öğrenciler de okuyacak. Okul müdürü, öğrencilerden fikir istiyor.","في مدرسة ستُفتتح قريباً سيدرس أيضاً طلاب يستخدمون كراسي متحركة وطلاب مكفوفون. ويطلب المدير أفكاراً من الطلاب."],parts:[
  {q:["Fırsat eşitliğini sağlamak için okula üç düzenleme öneriniz.","اقترح ثلاثة ترتيبات للمدرسة لتحقيق تكافؤ الفرص."],p:6,a:["Rampa ve asansör yapılmalı, özel takip şeritleri döşenmeli ve özel eğitim desteği verilmelidir.","يجب بناء منحدر ومصعد، ووضع ممرات إرشادية خاصة، وتقديم دعم التعليم الخاص."]},
  {q:["Bu düzenlemelerin yararını açıklayınız.","اشرح فائدة هذه الترتيبات."],p:5,a:["Bu düzenlemeler, özel gereksinimli bireylerin günlük yaşamını ve eğitime erişimini kolaylaştırır.","هذه الترتيبات تسهّل الحياة اليومية لذوي الاحتياجات الخاصة ووصولهم إلى التعليم."]}]},
-{id:"w12",s:3,o:"SB.7.1.2",ctx:["Bir spor kursu şöyle bir ilan veriyor: “Kursumuza yalnızca ailesinin geliri yüksek olan erkek çocukları alıyoruz.”","تنشر دورة رياضية هذا الإعلان: «نقبل في دورتنا الأولاد الذكور من العائلات ذات الدخل المرتفع فقط»."],parts:[
+{id:"w12",s:3,ctx:["Bir spor kursu şöyle bir ilan veriyor: “Kursumuza yalnızca ailesinin geliri yüksek olan erkek çocukları alıyoruz.”","تنشر دورة رياضية هذا الإعلان: «نقبل في دورتنا الأولاد الذكور من العائلات ذات الدخل المرتفع فقط»."],parts:[
  {q:["Bu ilan fırsat eşitliğine uygun mudur? Gerekçesiyle açıklayınız.","هل هذا الإعلان موافق لتكافؤ الفرص؟ اشرح مع السبب."],p:6,a:["Uygun değildir. Çünkü insanlar doğdukları yer, cinsiyetleri, ailelerinin ekonomik durumu veya sahip oldukları özellikler ne olursa olsun aynı haklara sahip olmalıdır.","ليس موافقاً. لأن الناس يجب أن تكون لهم الحقوق نفسها مهما كان مكان ولادتهم أو جنسهم أو الوضع المادي لعائلاتهم أو صفاتهم."]},
  {q:["İlanı fırsat eşitliğine uygun hâle getirmek için bir öneri yazınız.","اكتب اقتراحاً يجعل الإعلان موافقاً لتكافؤ الفرص."],p:5,a:["Ailesinin ekonomik durumu ve cinsiyeti ne olursa olsun isteyen her çocuk kursa aynı şartlarda alınmalıdır.","يجب قبول كل طفل يرغب في الدورة بالشروط نفسها، مهما كان جنسه والوضع المادي لعائلته."]}]},
-{id:"w13",s:3,o:"SB.7.1.2",ctx:["Durumlar: (1) Otobüslere rampa yapılması. (2) Özel gereksinimli bireylerin iş bulabilmesi. (3) Okulda özel eğitim desteği verilmesi. (4) Herkesin sağlık hizmeti alabilmesi. (5) Herkesin toplumsal etkinliklere katılabilmesi.","المواقف: (1) بناء منحدرات في الحافلات. (2) إمكانية حصول ذوي الاحتياجات الخاصة على عمل. (3) تقديم دعم التعليم الخاص في المدرسة. (4) إمكانية حصول الجميع على الخدمة الصحية. (5) إمكانية مشاركة الجميع في النشاطات الاجتماعية."],parts:[
+{id:"w13",s:3,ctx:["Durumlar: (1) Otobüslere rampa yapılması. (2) Özel gereksinimli bireylerin iş bulabilmesi. (3) Okulda özel eğitim desteği verilmesi. (4) Herkesin sağlık hizmeti alabilmesi. (5) Herkesin toplumsal etkinliklere katılabilmesi.","المواقف: (1) بناء منحدرات في الحافلات. (2) إمكانية حصول ذوي الاحتياجات الخاصة على عمل. (3) تقديم دعم التعليم الخاص في المدرسة. (4) إمكانية حصول الجميع على الخدمة الصحية. (5) إمكانية مشاركة الجميع في النشاطات الاجتماعية."],parts:[
  {q:["Her durumun ilgili olduğu fırsat eşitliği alanını yazınız.","اكتب مجال تكافؤ الفرص الذي يرتبط به كل موقف."],p:6,a:["(1) Ulaşım, (2) İstihdam, (3) Eğitim, (4) Sağlık, (5) Sosyal yaşama katılım.","(1) المواصلات، (2) التوظيف، (3) التعليم، (4) الصحة، (5) المشاركة في الحياة الاجتماعية."]},
  {q:["Bu alanlardan birinde fırsat eşitliğini sürdürmek için kendi fikrinizi yazınız.","اكتب فكرتك الخاصة لاستمرار تكافؤ الفرص في أحد هذه المجالات."],p:5,a:["Örnek (ulaşım): Bütün otobüs duraklarına rampa ve özel takip şeritleri yapılmalıdır. Böylece özel gereksinimli bireyler de kolayca yolculuk edebilir.","مثال (المواصلات): يجب بناء منحدرات وممرات إرشادية خاصة في كل مواقف الحافلات، فيستطيع ذوو الاحتياجات الخاصة التنقّل بسهولة أيضاً."]}]},
-{id:"w14",s:3,o:"SB.7.1.2",ctx:["Köyde doğan Ahmet de, şehirde doğan Elif de okula gidebiliyor. İkisi de yeteneklerini geliştirmek ve hayallerine ulaşmak istiyor.","أحمد المولود في القرية وإليف المولودة في المدينة يستطيعان الذهاب إلى المدرسة. ويريد كلاهما تطوير مواهبه والوصول إلى أحلامه."],parts:[
+{id:"w14",s:3,ctx:["Köyde doğan Ahmet de, şehirde doğan Elif de okula gidebiliyor. İkisi de yeteneklerini geliştirmek ve hayallerine ulaşmak istiyor.","أحمد المولود في القرية وإليف المولودة في المدينة يستطيعان الذهاب إلى المدرسة. ويريد كلاهما تطوير مواهبه والوصول إلى أحلامه."],parts:[
  {q:["Metindeki durum hangi kavrama örnektir? Yazınız.","الموقف في النص مثال على أيّ مفهوم؟ اكتبه."],p:4,a:["Fırsat eşitliğine örnektir.","هو مثال على تكافؤ الفرص."]},
  {q:["Bu kavramın bireye ve topluma katkısını açıklayınız.","اشرح فائدة هذا المفهوم للفرد وللمجتمع."],p:6,a:["Fırsat eşitliği, bireylerin yeteneklerini geliştirmelerine ve hayallerine ulaşmalarına fırsat verir. Toplumda adalet ve barış ortamına katkı sağlar.","تكافؤ الفرص يعطي الأفراد فرصة لتطوير مواهبهم والوصول إلى أحلامهم، ويساهم في نشر العدل والسلام في المجتمع."]}]},
-{id:"w15",s:3,o:"SB.7.1.2",ctx:["Sınıf başkanı şöyle diyor: “Okulumuzda herkesin eşit imkânlara sahip olmasını istiyorum. Özel gereksinimli arkadaşlarımız da bütün etkinliklere katılabilmeli.”","يقول رئيس الصف: «أريد أن تكون للجميع في مدرستنا فرص متساوية. ويجب أن يستطيع أصدقاؤنا من ذوي الاحتياجات الخاصة المشاركة في كل النشاطات»."],parts:[
+{id:"w15",s:3,ctx:["Sınıf başkanı şöyle diyor: “Okulumuzda herkesin eşit imkânlara sahip olmasını istiyorum. Özel gereksinimli arkadaşlarımız da bütün etkinliklere katılabilmeli.”","يقول رئيس الصف: «أريد أن تكون للجميع في مدرستنا فرص متساوية. ويجب أن يستطيع أصدقاؤنا من ذوي الاحتياجات الخاصة المشاركة في كل النشاطات»."],parts:[
  {q:["Fırsat eşitliğine üç örnek yazınız.","اكتب ثلاثة أمثلة على تكافؤ الفرص."],p:6,a:["Her çocuğun okula gidebilmesi, kız ve erkek öğrencilerin aynı şartlarda eğitim görebilmesi, özel gereksinimli bireylerin eğitimle desteklenmesi.","أن يستطيع كل طفل الذهاب إلى المدرسة، وأن يتعلّم الذكور والإناث بالشروط نفسها، وأن يُدعم ذوو الاحتياجات الخاصة بالتعليم."]},
  {q:["Sınıf başkanının isteğini gerçekleştirmek için bir fikir yazınız.","اكتب فكرة لتحقيق ما يريده رئيس الصف."],p:5,a:["Okul etkinlikleri rampası ve asansörü olan yerlerde yapılmalıdır. Böylece özel gereksinimli arkadaşlarımız da etkinliklere kolayca katılabilir.","يجب إقامة نشاطات المدرسة في أماكن فيها منحدر ومصعد، فيستطيع أصدقاؤنا من ذوي الاحتياجات الخاصة المشاركة فيها بسهولة."]}]},
-/* ---------- Hap Bilgi 4 · SB.7.1.3 ---------- */
-{id:"w16",s:4,o:"SB.7.1.3",ctx:["Liste: Çanakkale Savaşları · Kıbrıs Barış Harekâtı · Millî bir sporcunun olimpiyat şampiyonluğu · İki komşunun park yeri tartışması","القائمة: معارك جناق قلعة · عملية السلام في قبرص · بطولة رياضي وطني في الأولمبياد · شجار جارين على مكان ركن السيارة"],parts:[
+/* ---------- Hap Bilgi 4 ---------- */
+{id:"w16",s:4,ctx:["Liste: Çanakkale Savaşları · Kıbrıs Barış Harekâtı · Millî bir sporcunun olimpiyat şampiyonluğu · İki komşunun park yeri tartışması","القائمة: معارك جناق قلعة · عملية السلام في قبرص · بطولة رياضي وطني في الأولمبياد · شجار جارين على مكان ركن السيارة"],parts:[
  {q:["Listedekilerden hangisi millî mesele değildir? Gerekçesiyle yazınız.","أيّ مما في القائمة ليس قضية وطنية؟ اكتب ذلك مع السبب."],p:5,a:["İki komşunun tartışması millî mesele değildir. Çünkü milletin tamamını değil, yalnızca iki kişiyi ilgilendirir.","شجار الجارين ليس قضية وطنية. لأنه لا يهمّ الأمة كلها، بل شخصين فقط."]},
  {q:["Millî meseleyi açıklayınız.","اشرح القضية الوطنية."],p:6,a:["Millî mesele; bir milletin tamamını ilgilendiren, bağımsızlık, vatan bütünlüğü, güvenlik, ekonomi, kültür, sanat, spor ve ülke geleceğiyle ilgili önemli gelişmelerdir.","القضية الوطنية هي التطوّرات المهمة التي تهمّ الأمة كلها، وتتعلّق بالاستقلال ووحدة الوطن والأمن والاقتصاد والثقافة والفن والرياضة ومستقبل البلاد."]},
  {q:["Hap bilgide geçen üç millî mesele örneğini yazınız.","اكتب أمثلة القضايا الوطنية الثلاثة المذكورة في المعلومة المختصرة."],p:3,a:["Çanakkale Savaşları, Millî Mücadele, Kıbrıs Barış Harekâtı.","معارك جناق قلعة، النضال الوطني، عملية السلام في قبرص."]}]},
-{id:"w17",s:4,o:"SB.7.1.3",ctx:["Emre şöyle dedi: “Millî meseleler beni ilgilendirmez. Onlar yalnızca devleti yönetenlerin işidir.”","قال إمره: «القضايا الوطنية لا تعنيني. إنها من شأن من يديرون الدولة فقط»."],parts:[
+{id:"w17",s:4,ctx:["Emre şöyle dedi: “Millî meseleler beni ilgilendirmez. Onlar yalnızca devleti yönetenlerin işidir.”","قال إمره: «القضايا الوطنية لا تعنيني. إنها من شأن من يديرون الدولة فقط»."],parts:[
  {q:["Emre’nin görüşü doğru mudur? Gerekçesiyle açıklayınız.","هل رأي إمره صحيح؟ اشرح مع السبب."],p:5,a:["Doğru değildir. Çünkü millî meseleler yalnızca devlet yöneticilerini değil, toplumun bütün bireylerini ilgilendirir.","ليس صحيحاً. لأن القضايا الوطنية لا تهمّ مسؤولي الدولة فقط، بل كل أفراد المجتمع."]},
  {q:["Bu nedenle millî meselelerde neler önemlidir? Yazınız.","لهذا السبب، ما الأمور المهمة في القضايا الوطنية؟ اكتبها."],p:4,a:["Birlik, beraberlik ve dayanışma önemlidir.","الوحدة والتكاتف والتضامن."]},
  {q:["Bir vatandaş olarak millî meseleler karşısında nasıl davranmalısınız? Yazınız.","كمواطن، كيف يجب أن تتصرف تجاه القضايا الوطنية؟ اكتب ذلك."],p:4,a:["Millî meselelere duyarlı olmalı ve üzerime düşen sorumlulukları yerine getirmeliyim. Bu, daha güçlü bir gelecek için önemlidir.","يجب أن أهتمّ بالقضايا الوطنية وأؤدي المسؤوليات التي تقع عليّ. وهذا مهم من أجل مستقبل أقوى."]}]},
-{id:"w18",s:4,o:"SB.7.1.3",ctx:["Bir afetten sonra insanlar birbirine yardım etti, ihtiyacı olanlara destek oldu ve herkes elinden gelen görevi üstlendi.","بعد كارثة، ساعد الناس بعضهم بعضاً، وساندوا المحتاجين، وتولّى كل واحد ما يستطيع من مهام."],parts:[
+{id:"w18",s:4,ctx:["Bir afetten sonra insanlar birbirine yardım etti, ihtiyacı olanlara destek oldu ve herkes elinden gelen görevi üstlendi.","بعد كارثة، ساعد الناس بعضهم بعضاً، وساندوا المحتاجين، وتولّى كل واحد ما يستطيع من مهام."],parts:[
  {q:["Metinden Türk toplumunun zor dönemlerdeki tutumuna ilişkin bir çıkarım yazınız.","اكتب استنتاجاً من النص عن موقف المجتمع التركي في الأوقات الصعبة."],p:6,a:["Türk milleti savaş, afet ve ekonomik zorluk gibi dönemlerde ortak amaç etrafında birleşir ve birbirine destek olur.","الأمة التركية تتّحد حول هدف مشترك في أوقات مثل الحرب والكارثة والضيق الاقتصادي، ويساند أفرادها بعضهم بعضاً."]},
  {q:["Metindeki davranışların gösterdiği değerleri yazınız.","اكتب القيم التي تدل عليها السلوكيات في النص."],p:5,a:["Yardımlaşma, dayanışma, sorumluluk ve toplumsal görev bilinci.","التعاون، والتضامن، والمسؤولية، والوعي بالواجب الاجتماعي."]}]},
-{id:"w19",s:4,o:"SB.7.1.3",ctx:["“Birlikte daha güçlüyüz.” sözü sınıf panosuna yazıldı.","كُتبت عبارة «معاً نحن أقوى» على لوحة الصف."],parts:[
+{id:"w19",s:4,ctx:["“Birlikte daha güçlüyüz.” sözü sınıf panosuna yazıldı.","كُتبت عبارة «معاً نحن أقوى» على لوحة الصف."],parts:[
  {q:["Birlik ve dayanışma içinde hareket etmenin topluma ve ülkeye katkısını açıklayınız.","اشرح فائدة العمل بوحدة وتضامن للمجتمع وللبلاد."],p:6,a:["Millî meselelerde birlik, beraberlik ve dayanışma içinde hareket etmek toplumun gücünü artırır ve ülkemizin geleceğine katkı sağlar.","العمل بوحدة وتكاتف وتضامن في القضايا الوطنية يزيد قوة المجتمع ويساهم في مستقبل بلادنا."]},
  {q:["Yardımlaşma ve dayanışmanın güçlendirdiği iki duyguyu veya bilinci yazınız.","اكتب شعورين أو وعيين يقوّيهما التعاون والتضامن."],p:4,a:["Sorumluluk duygusunu ve toplumsal görev bilincini güçlendirir.","يقوّيان الشعور بالمسؤولية والوعي بالواجب الاجتماعي."]}]},
-/* ---------- Hap Bilgi 5 · SB.7.1.3 ---------- */
-{id:"w20",s:5,o:"SB.7.1.3",ctx:["Tarih kulübü panosunda şöyle yazıyor: “Millî Mücadele, Türk milletinin bağımsız yaşamak için verdiği mücadeledir.”","كُتب على لوحة نادي التاريخ: «النضال الوطني هو الكفاح الذي خاضته الأمة التركية لتعيش مستقلة»."],parts:[
+/* ---------- Hap Bilgi 5 ---------- */
+{id:"w20",s:5,ctx:["Tarih kulübü panosunda şöyle yazıyor: “Millî Mücadele, Türk milletinin bağımsız yaşamak için verdiği mücadeledir.”","كُتب على لوحة نادي التاريخ: «النضال الوطني هو الكفاح الذي خاضته الأمة التركية لتعيش مستقلة»."],parts:[
  {q:["Millî Mücadele, Türk milletinin hangi özelliklerini gösterir? Yazınız.","النضال الوطني يدل على أيّ صفات في الأمة التركية؟ اكتبها."],p:5,a:["Türk milletinin özgürlüğüne düşkünlüğünü ve bağımsız yaşama kararlılığını gösterir.","يدل على تعلّق الأمة التركية بحريتها وعزمها على العيش مستقلة."]},
  {q:["Türk toplumunun millî meselelerdeki tutumuna ilişkin bir çıkarım yazınız.","اكتب استنتاجاً عن موقف المجتمع التركي في القضايا الوطنية."],p:6,a:["Türk toplumu millî meselelerde ülkenin birliği, bağımsızlığı, güvenliği, refahı ve geleceği için ortak irade etrafında kenetlenmiştir.","تكاتف المجتمع التركي في القضايا الوطنية حول إرادة مشتركة من أجل وحدة البلاد واستقلالها وأمنها ورخائها ومستقبلها."]}]},
-{id:"w21",s:5,o:"SB.7.1.3",ctx:["Türk milleti, 15 Temmuz 2016 darbe girişiminde devletinin yanında yer aldı.","وقفت الأمة التركية إلى جانب دولتها في محاولة الانقلاب في 15 تموز 2016."],parts:[
+{id:"w21",s:5,ctx:["Türk milleti, 15 Temmuz 2016 darbe girişiminde devletinin yanında yer aldı.","وقفت الأمة التركية إلى جانب دولتها في محاولة الانقلاب في 15 تموز 2016."],parts:[
  {q:["Türk milletinin bu olayda gösterdiği üç tutumu yazınız.","اكتب ثلاثة مواقف أظهرتها الأمة التركية في هذا الحدث."],p:5,a:["Cesaret, kararlılık ve birlik göstermiştir.","أظهرت الشجاعة والعزم والوحدة."]},
  {q:["Bu olaydan, Türk milletinin neye sahip çıktığına dair bir çıkarım yazınız.","اكتب استنتاجاً من هذا الحدث عمّا دافعت عنه الأمة التركية."],p:5,a:["Türk milleti demokrasiye ve millî iradeye sahip çıkmıştır.","دافعت الأمة التركية عن الديمقراطية والإرادة الوطنية."]}]},
-{id:"w22",s:5,o:"SB.7.1.3",ctx:["Mete Gazoz olimpiyat şampiyonu oldu. Toplumda destekleyici kutlama mesajları yayımlandı.","فاز ميتي غازوز ببطولة الأولمبياد. ونُشرت في المجتمع رسائل تهنئة داعمة."],parts:[
+{id:"w22",s:5,ctx:["Mete Gazoz olimpiyat şampiyonu oldu. Toplumda destekleyici kutlama mesajları yayımlandı.","فاز ميتي غازوز ببطولة الأولمبياد. ونُشرت في المجتمع رسائل تهنئة داعمة."],parts:[
  {q:["Bu başarının toplumda oluşturduğu üç duyguyu yazınız.","اكتب ثلاثة مشاعر أثارها هذا النجاح في المجتمع."],p:5,a:["Gurur, sevinç ve umut. (Millî aidiyet, takdir ve minnettarlık da yazılabilir.)","الفخر، والفرح، والأمل. (ويمكن أيضاً كتابة الانتماء الوطني والتقدير والامتنان.)"]},
  {q:["Spor başarıları neden millî meseleler kapsamında değerlendirilir? Açıklayınız.","لماذا تُعدّ النجاحات الرياضية من القضايا الوطنية؟ اشرح."],p:6,a:["Çünkü millî meseleler yalnızca savaş ve zor dönemlerle sınırlı değildir. Spor, sanat ve bilim alanındaki millî başarılar da millî meseleler kapsamındadır.","لأن القضايا الوطنية لا تقتصر على الحرب والأوقات الصعبة. فالنجاحات الوطنية في الرياضة والفن والعلم هي أيضاً من القضايا الوطنية."]}]},
-{id:"w23",s:5,o:"SB.7.1.3",ctx:["Okul kulübü sahilde çöp topladı ve fidan dikti. Bir öğrenci ise şöyle dedi: “Vatan sevgisi sadece savaş zamanında gösterilir.”","جمع نادي المدرسة النفايات من الشاطئ وزرع شتلات. لكن طالباً قال: «حب الوطن يظهر في وقت الحرب فقط»."],parts:[
+{id:"w23",s:5,ctx:["Okul kulübü sahilde çöp topladı ve fidan dikti. Bir öğrenci ise şöyle dedi: “Vatan sevgisi sadece savaş zamanında gösterilir.”","جمع نادي المدرسة النفايات من الشاطئ وزرع شتلات. لكن طالباً قال: «حب الوطن يظهر في وقت الحرب فقط»."],parts:[
  {q:["Öğrencinin görüşü doğru mudur? Gerekçesiyle açıklayınız.","هل رأي الطالب صحيح؟ اشرح مع السبب."],p:6,a:["Doğru değildir. Çünkü vatanseverlik, barış zamanında da ülkeye karşı vatandaşlık sorumluluklarını yerine getirmeyi kapsar.","ليس صحيحاً. لأن الوطنية تشمل أيضاً أداء مسؤوليات المواطنة تجاه البلاد في وقت السلم."]},
  {q:["Barış zamanında vatan sevgisine iki örnek yazınız.","اكتب مثالين على حب الوطن في وقت السلم."],p:4,a:["Denizleri temiz tutmak ve ormanları korumak. (Doğal yaşamı korumak ve ağaçlandırmaya katkı sağlamak da yazılabilir.)","المحافظة على نظافة البحار وحماية الغابات. (ويمكن أيضاً كتابة حماية الطبيعة والمساهمة في التشجير.)"]}]}
 ];
@@ -1386,21 +1361,6 @@ function drawVisibleStars() { $$('.page:not([hidden]) canvas.stars').forEach(dra
 let rsT; window.addEventListener('resize', () => { clearTimeout(rsT); rsT = setTimeout(drawVisibleStars, 150); });
 
 /* ---------- written-exam engine ---------- */
-/* question counts per scenario, from the 2026-2027 ÖDSGM table. SB.7.2.1 (küreselleşme) is not in the teacher's notes: g counts it, the paper leaves it out */
-const OUTCOMES = {
-  'SB.7.1.1': { tr: 'Gruplarda ve sosyal hayatta etkili iletişimin önemi', ar: 'أهمية التواصل الفعّال في المجموعات والحياة الاجتماعية', haps: [1, 2] },
-  'SB.7.1.2': { tr: 'Özel gereksinimli bireyler için fırsat eşitliği', ar: 'تكافؤ الفرص لذوي الاحتياجات الخاصة', haps: [3] },
-  'SB.7.1.3': { tr: 'Millî meseleler karşısında Türk toplumunun tutum ve davranışları', ar: 'مواقف المجتمع التركي وسلوكياته تجاه القضايا الوطنية', haps: [4, 5] }
-};
-const SCENARIOS = [
-  { n: 1, c: { 'SB.7.1.1': 2, 'SB.7.1.2': 1, 'SB.7.1.3': 2 }, g: 2 },
-  { n: 2, c: { 'SB.7.1.1': 2, 'SB.7.1.2': 2, 'SB.7.1.3': 2 }, g: 1 },
-  { n: 3, c: { 'SB.7.1.1': 2, 'SB.7.1.2': 1, 'SB.7.1.3': 3 }, g: 2 },
-  { n: 4, c: { 'SB.7.1.1': 2, 'SB.7.1.2': 2, 'SB.7.1.3': 3 }, g: 0 },
-  { n: 5, c: { 'SB.7.1.1': 1, 'SB.7.1.2': 2, 'SB.7.1.3': 2 }, g: 1 }
-];
-const scenarioTotal = s => Object.values(s.c).reduce((a, b) => a + b, 0) + s.g;
-
 WQ.forEach(c => c.parts.forEach((p, i) => { p.id = c.id + '.' + i; }));
 const pointsOf = list => list.reduce((a, c) => a + c.parts.reduce((b, p) => b + p.p, 0), 0);
 const earnedOf = (list, marks) => list.reduce((a, c) => a + c.parts.reduce((b, p) => b + (marks[p.id] || 0) * p.p, 0), 0);
@@ -1410,7 +1370,7 @@ const esc = s => s.replace(/[&<>]/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&g
 
 function caseCard(c, n, inPaper) {
   return `<article class="q wq" data-c="${c.id}" style="--c:var(--c${c.s})">
-    <div class="qn"><b>${n}</b><span class="st">${c.o} · ${T('Hap Bilgi ' + c.s, 'المعلومة المختصرة ' + c.s)}</span></div>
+    <div class="qn"><b>${n}</b><span class="st">${T('Hap Bilgi ' + c.s, 'المعلومة المختصرة ' + c.s)}</span></div>
     <div class="wctx">${BI(c.ctx[0], c.ctx[1])}</div>
     ${c.parts.map((p, i) => `<div class="wpart" data-p="${p.id}">
       <div class="wask"><span class="ln">${'abc'[i]})</span>${BI(`${p.q[0]} <span class="pts">(${p.p} puan)</span>`, `${p.q[1]} <span class="pts">(${p.p} نقاط)</span>`)}</div>
@@ -1474,32 +1434,25 @@ function renderQuiz(el) {
 
 /* ---------- exam paper ---------- */
 let paperTimer = null;
-function pickFor(o, count) {
-  const pools = OUTCOMES[o].haps.map(h => shuffle(WQ.filter(c => c.s === h)));
-  const out = []; let i = Math.floor(Math.random() * pools.length);
-  while (out.length < count) { const p = pools[i++ % pools.length]; if (p.length) out.push(p.shift()); }
-  return out;
+/* seven questions across the five hap bilgi; hap 4 or 5 takes the extra one */
+function pickPaper() {
+  const per = { 1: 1, 2: 1, 3: 2, 4: 1, 5: 1 };
+  per[Math.random() < .5 ? 4 : 5]++;
+  return Object.keys(per).flatMap(h => shuffle(WQ.filter(c => c.s === +h)).slice(0, per[h]));
 }
 function renderExam(el) {
-  el.innerHTML = `<div class="quiz-head"><div class="bi" style="flex:1;min-width:220px"><h2 class="tr">Senaryo seç</h2><h2 class="ar" lang="ar" dir="rtl">اختر السيناريو</h2></div></div>
-    <div class="lead mt">${BI('Okulunun seçtiği senaryoyu öğretmene sor. Bilmiyorsan 4. senaryoyu seç: onda küreselleşme sorusu yoktur, kâğıt tam çıkar.', 'اسأل المعلم عن السيناريو الذي اختارته مدرستك. وإذا لم تعرفه فاختر السيناريو 4: ليس فيه سؤال عن العولمة، فتكون الورقة كاملة.')}</div>
-    <div class="scen-pick">${SCENARIOS.map(s => `<button type="button" class="btn" data-s="${s.n}" aria-pressed="false">${PB('Senaryo ' + s.n, 'السيناريو ' + s.n)}<small>${scenarioTotal(s)} ${T('soru', 'أسئلة')}</small></button>`).join('')}</div>
-    <div class="paper"></div>`;
-  $$('.scen-pick button', el).forEach(b => b.addEventListener('click', () => {
-    $$('.scen-pick button', el).forEach(x => x.setAttribute('aria-pressed', String(x === b)));
-    buildPaper($('.paper', el), SCENARIOS[+b.dataset.s - 1]);
-  }));
+  el.innerHTML = '<div class="paper"></div>';
+  buildPaper($('.paper', el));
 }
-function buildPaper(host, sc) {
+function buildPaper(host) {
   clearInterval(paperTimer);
   const box = document.createElement('div');
   host.replaceChildren(box);
-  const list = Object.keys(sc.c).flatMap(o => pickFor(o, sc.c[o]));
+  const list = pickPaper();
   const marks = {}, total = pointsOf(list), partCount = list.reduce((a, c) => a + c.parts.length, 0);
   let left = 40 * 60, finished = false;
   const clock = () => `${String(Math.floor(left / 60)).padStart(2, '0')}:${String(left % 60).padStart(2, '0')}`;
-  box.innerHTML = `${sc.g ? `<div class="callout warn mt">${BI(`<b>Bu kâğıt ${list.length} sorudur.</b> Bu senaryodaki ${sc.g} küreselleşme sorusu (SB.7.2.1) kâğıda konmadı, çünkü bu konu öğretmenin hap bilgi dosyasında yok.`, `<b>هذه الورقة فيها ${list.length} أسئلة.</b> لم نضع فيها ${sc.g === 1 ? 'سؤال العولمة' : 'سؤالَي العولمة'} (SB.7.2.1) من هذا السيناريو، لأن هذا الموضوع غير موجود في ملف المعلم.`)}</div>` : ''}
-    <div class="paper-bar"><button type="button" class="btn ptime" aria-live="off"><svg width="16" height="16"><use href="#i-redo"/></svg><b class="pclock">${clock()}</b>${PB('Süreyi başlat', 'ابدأ الوقت')}</button></div>
+  box.innerHTML = `<div class="paper-bar"><button type="button" class="btn ptime" aria-live="off"><svg width="16" height="16"><use href="#i-redo"/></svg><b class="pclock">${clock()}</b>${PB('Süreyi başlat', 'ابدأ الوقت')}</button></div>
     <div class="qlist">${list.map((c, i) => caseCard(c, i + 1, true)).join('')}</div>
     <div class="btnrow mt" style="justify-content:center"><button type="button" class="btn primary pfinish">${PB('Kâğıdı bitir, cevapları göster', 'أنهِ الورقة واعرض الأجوبة')}</button></div>
     <div class="endwrap" aria-live="polite"></div>`;
@@ -1521,16 +1474,16 @@ function buildPaper(host, sc) {
     const msg = pct >= 85 ? ['Çok iyi! Eksik kalan maddeleri bir kez daha oku.', 'جيد جداً! اقرأ البنود الناقصة مرة أخرى.']
       : pct >= 60 ? ['İyi gidiyorsun. Puanı düşük konuyu tekrar et, sonra yeni kâğıt çöz.', 'أنت على الطريق الصحيح. راجع الموضوع الأضعف، ثم حلّ ورقة جديدة.']
       : ['Sorun değil. Puanı düşük konudaki “Sınavda böyle yaz” cümlelerini çalış, sonra yeni kâğıt çöz.', 'لا مشكلة. ادرس جمل «اكتب هكذا في الامتحان» في الموضوع الأضعف، ثم حلّ ورقة جديدة.'];
-    const rows = Object.keys(sc.c).map(o => {
-      const part = list.filter(c => c.o === o), got = earnedOf(part, marks), max = pointsOf(part), hap = OUTCOMES[o].haps[0];
-      return `<a href="#s${hap}" class="block" style="--c:var(--c${hap});text-decoration:none;color:var(--ink);border-left:5px solid var(--c${hap})"><b>${o}</b><div>${PB(OUTCOMES[o].tr, OUTCOMES[o].ar)}</div><div class="mt" style="font-weight:800;color:${got < max ? 'var(--bad)' : 'var(--good)'}">${fmt(got)} / ${max}</div></a>`;
+    const rows = [...new Set(list.map(c => c.s))].map(h => {
+      const part = list.filter(c => c.s === h), got = earnedOf(part, marks), max = pointsOf(part), L = LESSONS[h - 1];
+      return `<a href="#s${h}" class="block" style="--c:var(--c${h});text-decoration:none;color:var(--ink);border-left:5px solid var(--c${h})"><div>${PB(h + '. ' + L.tr, h + '. ' + L.ar)}</div><div class="mt" style="font-weight:800;color:${got < max ? 'var(--bad)' : 'var(--good)'}">${fmt(got)} / ${max}</div></a>`;
     }).join('');
     end.innerHTML = `<div class="quiz-end" style="position:relative;overflow:hidden"><div class="big">${pct} / 100</div>
       ${BI(msg[0], msg[1])}
       ${BI('Bu puan kendi değerlendirmendir; gerçek sınav puanı değildir.', 'هذه الدرجة تقييمك لنفسك، وليست درجة الامتحان الحقيقي.')}
       <div class="grid g3 mt" style="text-align:left">${rows}</div>
       <div class="btnrow mt" style="justify-content:center"><button type="button" class="btn primary pnew">${PB('Yeni kâğıt', 'ورقة جديدة')}</button></div></div>`;
-    $('.pnew', end).addEventListener('click', () => { buildPaper(host, sc); host.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+    $('.pnew', end).addEventListener('click', () => { buildPaper(host); host.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
     if (pct >= 80) burst($('.quiz-end', end));
   };
   wireCards(box, marks, result);
@@ -1567,20 +1520,11 @@ function updateWrongCount() {
 }
 
 /* ---------- home ---------- */
-function renderExamInfo() {
-  const box = $('#examInfo'); if (!box) return;
-  const haps = { 'SB.7.1.1': 'Hap Bilgi 1, 2', 'SB.7.1.2': 'Hap Bilgi 3', 'SB.7.1.3': 'Hap Bilgi 4, 5' };
-  const hapsAr = { 'SB.7.1.1': 'المعلومتان 1 و 2', 'SB.7.1.2': 'المعلومة 3', 'SB.7.1.3': 'المعلومتان 4 و 5' };
-  box.innerHTML = `<table class="cmp scen"><thead><tr><th>${T('Öğrenme çıktısı', 'مخرج التعلّم')}</th><th>${T('Bu sayfada', 'في هذه الصفحة')}</th>${SCENARIOS.map(s => `<th class="n">S${s.n}</th>`).join('')}</tr></thead><tbody>
-    ${Object.keys(OUTCOMES).map(o => `<tr><td><b>${o}</b> ${T(OUTCOMES[o].tr, OUTCOMES[o].ar)}</td><td>${T(haps[o], hapsAr[o])}</td>${SCENARIOS.map(s => `<td class="n">${s.c[o]}</td>`).join('')}</tr>`).join('')}
-    <tr class="missing"><td><b>SB.7.2.1</b> ${T('Küreselleşmenin insan ve toplum hayatına etkisi', 'تأثير العولمة في حياة الإنسان والمجتمع')}</td><td>${T('<b>Dosyada yok</b>', '<b>غير موجود في الملف</b>')}</td>${SCENARIOS.map(s => `<td class="n">${s.g || '–'}</td>`).join('')}</tr>
-    <tr class="tot"><td colspan="2">${T('Toplam soru', 'مجموع الأسئلة')}</td>${SCENARIOS.map(s => `<td class="n">${scenarioTotal(s)}</td>`).join('')}</tr></tbody></table>`;
-}
 function renderHome() {
   $('#lessonCards').innerHTML = LESSONS.map(L => {
     const list = WQ.filter(c => c.s === L.n), tot = pointsOf(list), b = earnedOf(list, store.marks);
     return `<a class="lcard" href="#s${L.n}" style="--c:var(--c${L.n})">
-      <div class="top"><span class="n">${T('BÖLÜM ' + L.n, 'القسم ' + L.n)} · ${list[0].o}</span><svg width="26" height="26" style="color:var(--c${L.n})"><use href="#${L.icon}"/></svg></div>
+      <div class="top"><span class="n">${T('BÖLÜM ' + L.n, 'القسم ' + L.n)}</span><svg width="26" height="26" style="color:var(--c${L.n})"><use href="#${L.icon}"/></svg></div>
       <h3>${PB(L.tr, L.ar)}</h3><p class="lead" style="font-size:.9rem">${PB(L.sub[0], L.sub[1])}</p>
       <div class="prog"><i style="width:${b / tot * 100}%"></i></div>
       <div class="pt">${b ? T(`Puanın: ${fmt(b)} / ${tot}`, `درجتك: ${fmt(b)} / ${tot}`) : T(`${list.length} yazılı sorusu`, `${list.length} أسئلة مكتوبة`)}</div></a>`;
@@ -1889,7 +1833,6 @@ pickGame($('#vatan'), [
 /* ---------- boot ---------- */
 $$('.quiz[data-quiz]').forEach(el => { if (/^\d$/.test(el.dataset.quiz)) renderQuiz(el); });
 renderExam($('[data-quiz="exam"]'));
-renderExamInfo();
 route();
 
 </script>

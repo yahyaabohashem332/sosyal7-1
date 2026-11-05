@@ -12,9 +12,7 @@ Sosyal Bilgiler 7. sınıf 1. dönem 1. yazılı için hazırlık sitesi. Türk�
 4. Millî meselelerde birlik ve beraberlik
 5. Geçmişten günümüze millî dayanışma
 
-Her bölümde etkileşimli oyunlar, “Sınavda böyle yaz” cümleleri ve örnek cevaplı açık uçlu yazılı soruları var. Ayrıca senaryoya göre yazılı provası, “Eksiklerim” tekrarı ve son tekrar kartı bulunur.
-
-Küreselleşme konusu (SB.7.2.1) öğretmenin dosyasında olmadığı için sitede yoktur.
+Her bölümde etkileşimli oyunlar, “Sınavda böyle yaz” cümleleri ve örnek cevaplı açık uçlu yazılı soruları var. Ayrıca yazılı provası, “Eksiklerim” tekrarı ve son tekrar kartı bulunur.
 
 ## Kullanım · الاستخدام
 
